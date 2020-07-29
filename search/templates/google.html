@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block content %}
+            <!-- <div class="row"> -->
+               
+
+              <div class="col  float-right" >
+                <a href="{{url_for('googleImage')}}" class="cust " role="button" aria-disabled="true" style="font-size: inherit;"> Image search </a>
+                <a href="{{url_for('advancesearch')}}" class="cust" role="button" aria-disabled="true" style="font-size: inherit;"> Advance search</a>
+                
+              </div>
+         
+                    <img src = {{ url_for('static', filename="google.png")}} class="rounded mx-auto d-block center" alt="Google">
+                
+        <div  class="input_div">
+            <div class="SDkEP">
+                <!-- <img src="search.png" alt="search" class="search"> -->
+                <img src="{{url_for('static', filename='search.png')}}" alt="search" class="search">
+
+            <form action=" https://www.google.com/search" method="GET">  
+                
+                <input type="text" id ="name" name="q" class="txtbox">
+                <button type="submit" id="icn"> <img src="{{ url_for('static', filename='voice.png') }}" alt="voice" class="voice"></button>
+                <div class="searchdiv">
+                    <input type="submit" name="btnK" class="btn btn-light button custom" value="Google Search" >                    
+                    <input type="submit" value="I am Feeling lucky" class="btn btn-light button custom" name="btnI">
+                   
+                </div>
+                              
+                </form>
+            </div>
+        </div>
+        
+       {% endblock %}
+       
+        
+   
+      
+
+       

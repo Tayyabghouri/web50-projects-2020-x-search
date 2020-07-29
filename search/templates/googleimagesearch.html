@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+            
+           <!-- <div class="img">
+           
+                 <img src="google.png" class="center-image" alt="Google">
+                 <span  class="center-image msglbl">Images</span>
+                
+                 <a href="google.html" class="btn btn-primary btnheight" role="button" aria-disabled="true">Google Search</a>
+               
+                  <a href="googleimagesearch.html" class ="btn btn-primary" alt="image">go to next page</a>  -->
+                
+            <!-- </div>  -->
+            
+            <div class="col  float-right" >
+                <a href="{{ url_for('google') }}" class="cust " role="button" aria-disabled="true" style="font-size: inherit;"> Go back to Google </a>
+           
+              </div>
+                    <img src = {{ url_for('static', filename="googleimage.png")}} class="rounded mx-auto d-block center" alt="Google">
+               
+        <div  class="input_div">
+            <div class="SDkEP">
+             
+            <form action=" https://www.google.com/search" method="GET">  
+                <input type="hidden" id="fname" name="tbm" value="isch" />
+                <input type="text" id ="name" name="q" class="imgtxtbox">
+                <button type="submit" style="border: none;"><i class="fas fa-camera"></i></button>
+                <button type="submit" style="border: none;">
+                    <img src="{{url_for('static', filename='voice.png')}}" alt="voice" class="voice">
+                </button>
+                
+                    <button type="submit" style="border: none;"> <i class="fas fa-search"></i></button>
+                <!-- <img src="search.png" alt="search" class="search"> -->
+                <div class="searchdiv">
+                    
+                </div>
+               
+               
+                </form>
+            </div>
+
+        </div>     
+           
+         
+        <a href="https://icons8.com/icon/5401/camera">.</a>
+        {% endblock %}
+ 
+
+      
+
+       

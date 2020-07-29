@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class="googlelnk">
+  <a href="https://www.google.com/webhp?tab=ww&authuser=0"><img src="{{url_for('static', filename='google.png')}}"
+      alt="google" width="80" height="50">
+  </a>
+  <div class="col  float-right">
+    <a href="{{url_for('google')}}" class="cust " role="button" aria-disabled="true" style="font-size: inherit;"> Go back to Google
+      </a>
+
+  </div>
+</div>
+
+<div class="heading">
+  <h4 style="color: red;"> Advanced Search</h4><br><br>
+</div>
+
+<div>
+  <table class="table" >
+    <tbody>
+
+      <form action="https://www.google.com/search" method="GET">
+
+
+        <tr>
+          <td>
+            <label for="allwords">all these words:</label>
+          </td>
+          <div class="form-group">
+            <td><input type="text" name="as_q" class="form-control" id="allwords"></td>
+            <td><small>Type the important words: tri-colour rat terrier</small></td>
+          </div>
+        </tr>
+
+
+        <div class="form-group">
+          <tr>
+            <td>
+              <label for="allwords">exact word/phrase:</label>
+            </td>
+
+            <td><input type="text" class="form-control" name="as_epq" id="exactwords"></td>
+            <td><small>Put exact words in quotes: "rat terrier"</small></td>
+          </tr>
+        </div>
+
+        <div class="form-group">
+          <tr>
+            <td>
+              <label for="allwords">any of these words:</label>
+            </td>
+
+
+            <td><input type="text" class="form-control" name="as_oq" id="anywords"></td>
+            <td><small>Type OR between all the words you want: miniature OR standard</small></td>
+
+          </tr>
+
+        </div>
+
+
+
+        <div class="form-group">
+          <tr>
+            <td>
+              <label for="allwords">none of these words:</label>
+            </td>
+
+            <td><input type="text" class="form-inline form-control" name="as_eq" id="negative"></td>
+
+            <td><small>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</small></td>
+          </tr>
+          <tr>
+            <td colspan="4"><button type="submit" class="btn btn-primary btn-lg float-right"
+                style="font-size: medium;">Advanced Search</button></td>
+          </tr>
+        </div>
+
+      </form>
+
+    </tbody>
+  </table>
+
+
+</div>
+{% endblock %}
